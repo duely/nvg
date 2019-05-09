@@ -1,0 +1,21 @@
+[
+  {
+    "modid": "nvg",
+    "name": "Night Vision Goggles",
+    "description": "Allows you to see in the dark and/or highlight mobs, at the cost of durability. Repairable!",
+    "version": "${version}",
+    "credits": "Noobanidus",
+    "logoFile": "assets/nvg/textures/logo.png",
+    "mcversion": "${mc_version}",
+    "url": "http://github.com/duely/nvg",
+    "updateUrl": "",
+    "authorList": [
+      "Noobanidus"
+    ],
+    "parent": "",
+    "screenshots": [],
+    "dependencies": [
+      "forge,baubles"
+    ]
+  }
+]
