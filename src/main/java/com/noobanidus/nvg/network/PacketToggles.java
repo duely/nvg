@@ -70,5 +70,35 @@ public class PacketToggles {
         }
     }
 
+    public static class ToggleBoth implements IMessage {
 
+        public ToggleBoth() {
+        }
+
+        @Override
+        public void fromBytes(ByteBuf buf) {
+        }
+
+        @Override
+        public void toBytes(ByteBuf buf) {
+        }
+
+        public static class Handler extends PacketHandler.ServerHandler<ToggleBoth> {
+            @Override
+            void processMessage(ToggleBoth message, MessageContext ctx) {
+                EntityPlayerMP player = ctx.getServerHandler().player;
+
+                ItemStack goggles = InventoryUtil.getGoggles(player);
+                if (goggles.isEmpty()) return;
+
+                boolean active = Items.goggles.getActive(goggles, ItemGoggles.NIGHT_VISION) || Items.goggles.getActive(goggles, ItemGoggles.MOB_VISION);
+                Items.goggles.setActive(goggles, ItemGoggles.NIGHT_VISION, !active);
+                Items.goggles.setActive(goggles, ItemGoggles.MOB_VISION, !active);
+                if (active) {
+                    Items.goggles.clearActive(player, ItemGoggles.MOB_VISION);
+                    Items.goggles.clearActive(player, ItemGoggles.NIGHT_VISION);
+                }
+            }
+        }
+    }
 }

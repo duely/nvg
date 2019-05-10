@@ -8,6 +8,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class ModelGoggles extends ModelBiped {
+    public static final ModelGoggles model_goggles = new ModelGoggles();
+    public static final ModelGoggles model_goggles_bauble = new ModelGoggles();
+
     public ModelRenderer goggles;
 
     public ModelGoggles() {

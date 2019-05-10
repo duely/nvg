@@ -19,6 +19,7 @@ public class PacketHandler {
     public static void initPackets() {
         instance.registerMessage(PacketToggles.ToggleNightVision.Handler.class, PacketToggles.ToggleNightVision.class, 0, Side.SERVER);
         instance.registerMessage(PacketToggles.ToggleMobVision.Handler.class, PacketToggles.ToggleMobVision.class, 1, Side.SERVER);
+        instance.registerMessage(PacketToggles.ToggleBoth.Handler.class, PacketToggles.ToggleBoth.class, 2, Side.SERVER);
     }
 
     public static void sendToAll(IMessage message) {
