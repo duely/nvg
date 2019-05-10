@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "GCG",
+        "IEI",
+        "I I"
+    ],
+    "key": {
+        "G": {
+            "item": "minecraft:glass"
+        },
+        "C": {
+            "item": "minecraft:spider_eye"
+        },
+        "E": {
+            "item": "minecraft:golden_carrot"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "nvg:goggles"
+    }
+}
