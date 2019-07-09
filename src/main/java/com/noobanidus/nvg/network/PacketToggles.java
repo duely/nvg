@@ -31,10 +31,10 @@ public class PacketToggles {
                 ItemStack goggles = InventoryUtil.getGoggles(player);
                 if (goggles.isEmpty()) return;
 
-                boolean active = Items.goggles.getActive(goggles, ItemGoggles.MOB_VISION);
-                Items.goggles.toggleActive(goggles, ItemGoggles.MOB_VISION);
+                boolean active = Items.goggles.getActive(goggles, ItemGoggles.NIGHT_VISION);
+                Items.goggles.toggleActive(goggles, ItemGoggles.NIGHT_VISION);
                 if (active) {
-                    Items.goggles.clearActive(player, ItemGoggles.MOB_VISION);
+                    Items.goggles.clearActive(player, ItemGoggles.NIGHT_VISION);
                 }
             }
         }
@@ -60,11 +60,10 @@ public class PacketToggles {
 
                 ItemStack goggles = InventoryUtil.getGoggles(player);
                 if (goggles.isEmpty()) return;
-
-                boolean active = Items.goggles.getActive(goggles, ItemGoggles.NIGHT_VISION);
-                Items.goggles.toggleActive(goggles, ItemGoggles.NIGHT_VISION);
+                boolean active = Items.goggles.getActive(goggles, ItemGoggles.MOB_VISION);
+                Items.goggles.toggleActive(goggles, ItemGoggles.MOB_VISION);
                 if (active) {
-                    Items.goggles.clearActive(player, ItemGoggles.NIGHT_VISION);
+                    Items.goggles.clearActive(player, ItemGoggles.MOB_VISION);
                 }
             }
         }
