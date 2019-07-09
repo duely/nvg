@@ -16,7 +16,7 @@ public class Capabilities {
     @SubscribeEvent
     public static void onItemCapability (AttachCapabilitiesEvent<ItemStack> event) {
         if (event.getObject().getItem() == Items.goggles) {
-            event.addCapability(new ResourceLocation("nvg", "goggles"), CapabilityHandler.INSTANCE);
+            event.addCapability(new ResourceLocation(NightVisionGoggles.MODID, "goggles"), CapabilityHandler.INSTANCE);
         }
     }
 }

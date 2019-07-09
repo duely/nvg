@@ -83,6 +83,8 @@ public class ItemGoggles extends ItemArmor implements IRenderBauble {
         if (entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) entity;
 
+            if (player.world.isRemote) return;
+
             ItemStack goggles = InventoryUtil.getGoggles(player);
             if (goggles.isEmpty()) {
                 return;
@@ -95,12 +97,12 @@ public class ItemGoggles extends ItemArmor implements IRenderBauble {
 
             if (nv) {
                 damage_chance++;
-                player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 210, 0, true, false));
+                player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 400, 0, true, false));
             }
 
             if (mv) {
                 damage_chance++;
-                player.addPotionEffect(new PotionEffect(NightVisionGoggles.MOB_VISION, 210, 0, true, false));
+                player.addPotionEffect(new PotionEffect(NightVisionGoggles.MOB_VISION, 400, 0, true, false));
             }
 
             if (player.ticksExisted % 200 == 0) {
