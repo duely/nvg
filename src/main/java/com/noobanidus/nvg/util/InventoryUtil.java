@@ -11,14 +11,14 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = NightVisionGoggles.MODID)
 public class InventoryUtil {
-    public static ItemStack getGoggles(EntityPlayer player) {
-        ItemStack stack = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
-        if (!stack.isEmpty() && stack.getItem() == Items.goggles) return stack;
+  public static ItemStack getGoggles(EntityPlayer player) {
+    ItemStack stack = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
+    if (!stack.isEmpty() && stack.getItem() == Items.goggles) return stack;
 
-        if (Loader.isModLoaded("baubles")) {
-            return BaubleInventoryUtil.getGoggles(player);
-        }
-
-        return ItemStack.EMPTY;
+    if (Loader.isModLoaded("baubles")) {
+      return BaubleInventoryUtil.getGoggles(player);
     }
+
+    return ItemStack.EMPTY;
+  }
 }

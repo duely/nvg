@@ -7,26 +7,26 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.event.*;
 
 public class CommonProxy implements ISidedProxy {
-    public void preInit(FMLPreInitializationEvent event) {
-        PacketHandler.initPackets();
-        NightVisionGoggles.TAB = new NightVisionGoggles.CreativeTab(CreativeTabs.getNextID(), NightVisionGoggles.MODID);
-        Items.preInit();
-    }
+  public void preInit(FMLPreInitializationEvent event) {
+    PacketHandler.initPackets();
+    NightVisionGoggles.TAB = new NightVisionGoggles.CreativeTab(CreativeTabs.getNextID(), NightVisionGoggles.MODID);
+    Items.preInit();
+  }
 
-    public void init(FMLInitializationEvent event) {
-    }
+  public void init(FMLInitializationEvent event) {
+  }
 
-    public void postInit(FMLPostInitializationEvent event) {
-    }
+  public void postInit(FMLPostInitializationEvent event) {
+  }
 
-    public void loadComplete(FMLLoadCompleteEvent event) {
-        NightVisionGoggles.LOG.info("NightVisionGoggles: Load Complete.");
-        NightVisionGoggles.CONFIG.save();
-    }
+  public void loadComplete(FMLLoadCompleteEvent event) {
+    NightVisionGoggles.LOG.info("NightVisionGoggles: Load Complete.");
+    NightVisionGoggles.CONFIG.save();
+  }
 
-    public void serverStarting(FMLServerStartingEvent event) {
-    }
+  public void serverStarting(FMLServerStartingEvent event) {
+  }
 
-    public void serverStarted(FMLServerStartedEvent event) {
-    }
+  public void serverStarted(FMLServerStartedEvent event) {
+  }
 }

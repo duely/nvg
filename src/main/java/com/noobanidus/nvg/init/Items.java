@@ -20,35 +20,35 @@ import net.minecraftforge.registries.IForgeRegistry;
 @SuppressWarnings("WeakerAccess")
 @Mod.EventBusSubscriber(modid = NightVisionGoggles.MODID)
 public class Items {
-    public static ItemGoggles goggles;
+  public static ItemGoggles goggles;
 
-    public static void preInit() {
-        goggles = new ItemGoggles();
-        goggles.setRegistryName("nvg", "goggles").setTranslationKey("goggles");
-    }
+  public static void preInit() {
+    goggles = new ItemGoggles();
+    goggles.setRegistryName("nvg", "goggles").setTranslationKey("goggles");
+  }
 
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-    }
+  @SubscribeEvent
+  public static void registerBlocks(RegistryEvent.Register<Block> event) {
+  }
 
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-        IForgeRegistry<Item> registry = event.getRegistry();
-        registry.registerAll(goggles);
-    }
+  @SubscribeEvent
+  public static void registerItems(RegistryEvent.Register<Item> event) {
+    IForgeRegistry<Item> registry = event.getRegistry();
+    registry.registerAll(goggles);
+  }
 
-    @SubscribeEvent
-    public static void registerPotions(RegistryEvent.Register<Potion> event) {
-        event.getRegistry().register(NightVisionGoggles.MOB_VISION);
-    }
+  @SubscribeEvent
+  public static void registerPotions(RegistryEvent.Register<Potion> event) {
+    event.getRegistry().register(NightVisionGoggles.MOB_VISION);
+  }
 
-    @SideOnly(Side.CLIENT)
-    @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
-        ModelLoader.setCustomModelResourceLocation(goggles, 0, new ModelResourceLocation(new ResourceLocation("nvg", "goggles"), "inventory"));
-    }
+  @SideOnly(Side.CLIENT)
+  @SubscribeEvent
+  public static void registerModels(ModelRegistryEvent event) {
+    ModelLoader.setCustomModelResourceLocation(goggles, 0, new ModelResourceLocation(new ResourceLocation("nvg", "goggles"), "inventory"));
+  }
 
-    @SubscribeEvent
-    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
-    }
+  @SubscribeEvent
+  public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+  }
 }

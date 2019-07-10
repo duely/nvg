@@ -1,9 +1,7 @@
 package com.noobanidus.nvg.events;
 
 import com.noobanidus.nvg.NightVisionGoggles;
-import com.noobanidus.nvg.init.Config;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
