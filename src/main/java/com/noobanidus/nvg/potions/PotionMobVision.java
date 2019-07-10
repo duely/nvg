@@ -2,6 +2,7 @@ package com.noobanidus.nvg.potions;
 
 import com.noobanidus.nvg.NightVisionGoggles;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Gui;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureType;
