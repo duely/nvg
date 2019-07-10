@@ -210,24 +210,22 @@ public class ItemGoggles extends ItemArmor implements IRenderBauble {
     boolean nv = getActive(stack, NIGHT_VISION);
     boolean mv = getActive(stack, MOB_VISION);
 
+    tooltip.add(I18n.format("nvg.text.tooltip"));
     tooltip.add("");
+    //tooltip.add(I18n.format("nvg.text.tooltip2", Keybinds.nightVisionKey.getDisplayName(), Keybinds.mobVisionKey.getDisplayName(), Keybinds.toggleVisionKey.getDisplayName()));
     if (Keybinds.nightVisionKey != null) {
-      tooltip.add(I18n.format("nvg.text.tooltip"));
-      tooltip.add("");
-      tooltip.add(I18n.format("nvg.text.tooltip2", Keybinds.nightVisionKey.getDisplayName(), Keybinds.mobVisionKey.getDisplayName(), Keybinds.toggleVisionKey.getDisplayName()));
-    }
-
-    if (nv) {
-      tooltip.add("");
-      tooltip.add(TextFormatting.BLUE + "" + TextFormatting.BOLD + I18n.format("nvg.text.night_vision"));
-    }
-    if (mv) {
-      if (!nv) {
-        tooltip.add("");
+      if (nv) {
+        tooltip.add(TextFormatting.BLUE + "" + TextFormatting.BOLD + I18n.format("nvg.text.tooltip2_active", Keybinds.nightVisionKey.getDisplayName()));
+      } else {
+        tooltip.add(I18n.format("nvg.text.tooltip2", Keybinds.nightVisionKey.getDisplayName()));
       }
-      tooltip.add(TextFormatting.LIGHT_PURPLE + "" + TextFormatting.BOLD + I18n.format("nvg.text.mob_vision"));
+      if (mv) {
+        tooltip.add(TextFormatting.LIGHT_PURPLE + "" + TextFormatting.BOLD + I18n.format("nvg.text.tooltip3_active", Keybinds.mobVisionKey.getDisplayName()));
+      } else {
+        tooltip.add(I18n.format("nvg.text.tooltip3", Keybinds.mobVisionKey.getDisplayName()));
+      }
+      tooltip.add(I18n.format("nvg.text.tooltip4", Keybinds.toggleVisionKey.getDisplayName()));
     }
-
     super.addInformation(stack, worldIn, tooltip, flagIn);
   }
 }

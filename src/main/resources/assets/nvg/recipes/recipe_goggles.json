@@ -1,13 +1,14 @@
 {
-    "type": "minecraft:crafting_shaped",
+    "type": "forge:ore_shaped",
     "pattern": [
-        "GCG",
-        "IEI",
-        "I I"
+        "GIG",
+        "C C",
+        "E E"
     ],
     "key": {
         "G": {
-            "item": "minecraft:glass"
+            "type": "forge:ore_dict",
+            "ore":  "paneGlass"
         },
         "C": {
             "item": "minecraft:spider_eye"
@@ -16,7 +17,8 @@
             "item": "minecraft:golden_carrot"
         },
         "I": {
-            "item": "minecraft:iron_ingot"
+            "type": "forge:ore_dict",
+            "ore": "ingotIron"
         }
     },
     "result": {
