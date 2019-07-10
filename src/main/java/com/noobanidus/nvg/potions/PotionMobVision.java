@@ -58,8 +58,6 @@ public class PotionMobVision extends Potion {
       for (EntityLivingBase mob : mobs) {
         mob.addPotionEffect(new PotionEffect(MobEffects.GLOWING, 10, 0, true, false));
       }
-
-
     }
   }
 
