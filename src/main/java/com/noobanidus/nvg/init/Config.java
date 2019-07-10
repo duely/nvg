@@ -12,6 +12,8 @@ public class Config {
     public int SNEAK_TICKS = CONFIG.get("HUD", "Ticks", 45, "Number of ticks (1/20th of a second) you need to sneak for before the HUD will display.").getInt();
     public boolean SNEAK_HUD = CONFIG.get("HUD", "Show", true, "Whether or not to show the HUD with icons for night vision, mob vision, and durability.").getBoolean();
     public boolean COMPLEX_DURABILITY = CONFIG.get("HUD", "Complex Durability", true, "Whether or not to show the full numerical durability.").getBoolean();
+    public boolean UNDERWATER_FOG = CONFIG.get("General", "Underwater Vision", true, "Whether or not wearing goggles will grant clarity while underwater").getBoolean();
+    public boolean NETHER_FOG = CONFIG.get("General", "Nether Vision", true, "Whether or not wearing goggles will grant clarity while in the Nether").getBoolean();
 
     public Config() {
     }
